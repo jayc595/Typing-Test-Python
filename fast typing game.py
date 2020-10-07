@@ -2,9 +2,9 @@ import pygame, random
 
 pygame.init ()
 
-background = (200, 200, 255)
-blue = (30, 30, 255)
+background = (0, 0, 0)
 green = (30,130,30)
+white = (255,255,255)
 
 X = 600
 Y = 400
@@ -19,7 +19,7 @@ def new_word():
     pressedWord = ""
     lines = open("listofwords.txt").read().splitlines()
     chosenWord = random.choice(lines)
-    text = font.render(chosenWord, True, blue)
+    text = font.render(chosenWord, True, white)
 
 win = pygame.display.set_mode((X, Y))
 pygame.display.set_caption("Fast Typing Game")
